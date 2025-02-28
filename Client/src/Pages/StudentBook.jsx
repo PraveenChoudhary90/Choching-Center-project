@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import BASE_URL from "../config";
 import Button from "react-bootstrap/esm/Button";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const StudentBook=()=>{
     const {id} = useParams();
@@ -36,7 +38,9 @@ const StudentBook=()=>{
            const api = `${BASE_URL}/Student/StudentSave`;
         try {
             const response = await axios.post(api, {docid:id, ...input});
-            alert("data save");
+            // alert("data save");
+        toast.success(response.data.msg);
+
         } catch (error) {
              console.log(error);
         }
@@ -70,6 +74,8 @@ const StudentBook=()=>{
       <Button onClick={handleSubmit}> Register!</Button>
     </Form>
     <br /> <br />
+     <ToastContainer />
+
         </>
       )
 }

@@ -36,7 +36,7 @@ const MyStudents=()=>{
 
     return(
         <>
-          <h1> Student List</h1>
+          <h1> Student Data List</h1>
           <hr />
           <Table striped bordered hover>
       <thead>

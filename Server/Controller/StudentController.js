@@ -25,7 +25,7 @@ const StudentSave=async(req, res)=>{
            teacherId:docid
         }
     )
-     res.status(200).send({msg:"Your Appointment Booked!"});
+     res.status(200).send({msg:"Your Course is Booked!"});
 }
 
 module.exports={
