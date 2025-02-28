@@ -7,6 +7,9 @@ import About from './Pages/About'
 import TeacherRagistraction from './Pages/TeacherRegistraction'
 import TeacherLogin from './Pages/TeacherLogin'
 import Search from './Pages/Search'
+import Dashboard from './TeacherDashboard'
+import MyStudents from './Pages/MyStudent'
+import StudentBook from './Pages/StudentBook'
 
 function App() {
   
@@ -22,8 +25,14 @@ function App() {
     <Route path='registraction' element={<TeacherRagistraction/>}/>
     <Route path='login' element={<TeacherLogin/>}/>
     <Route path='search' element={<Search/>}/>
+    <Route path='mybook/:id' element={<StudentBook/>}/>
     </Route>
   </Routes>
+  <Routes>
+        <Route path='dashboard' element={<Dashboard/>}>
+        <Route path='mystudent' element={<MyStudents/>}/>
+        </Route>
+      </Routes>
   </BrowserRouter>
     </>
   )

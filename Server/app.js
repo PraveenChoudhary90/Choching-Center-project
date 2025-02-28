@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const cors = require("cors");
 require("dotenv").config();
 const TeacherRoute = require("./Routes/TeacherRoute")
-
+const StudentRoute = require("./Routes/StudentRoute")
 
 app.use(cors());
 
@@ -20,7 +20,7 @@ mongoose.connect(process.env.STRING).then(()=>{
 })
 
 app.use("/Teacher",  TeacherRoute)
-
+app.use("/Student", StudentRoute)
 
 
 
